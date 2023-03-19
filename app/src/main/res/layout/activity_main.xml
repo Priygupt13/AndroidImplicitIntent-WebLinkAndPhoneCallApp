@@ -34,8 +34,8 @@
         android:id="@+id/editTextPhone"
         android:layout_width="278dp"
         android:layout_height="78dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="357dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="340dp"
         android:autofillHints="phone"
         android:ems="10"
         android:hint="@string/mact_hint_phone"
@@ -76,17 +76,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+   <Button
+        android:id="@+id/btn_sendtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="556dp"
+        android:onClick="sendText"
+        android:text="@string/mact_btn_sendtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="289dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="548dp"
+        android:ems="10"
+        android:hint="@string/mact_hint_sendtext"
+        android:importantForAutofill="no"
+        android:inputType="textUri"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_close"
         android:layout_width="170dp"
         android:layout_height="48dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="614dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="628dp"
         android:onClick="closeApp"
         android:text="@string/mact_btn_close"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <View
         android:id="@+id/divider"
@@ -97,4 +122,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

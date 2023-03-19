@@ -79,12 +79,24 @@ public class MainActivity extends AppCompatActivity {
         EditText urlEditText = (EditText) findViewById(R.id.editTextPhone);
         String phoneNumber = urlEditText.getText().toString();
         if(PhoneNumberUtils.isGlobalPhoneNumber(phoneNumber)){
-
             Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
             startActivity(intent);
         }
         else{
             Toast.makeText(this, "Please Enter a valid phone number", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void sendText(View view) {
+        EditText urlEditText = (EditText) findViewById(R.id.editTextMessage);
+        String textToSend = urlEditText.getText().toString();
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, textToSend);
+        sendIntent.setType("text/plain");
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        Toast.makeText(this, "Message Sent!", Toast.LENGTH_SHORT).show();
+        startActivity(shareIntent);
+
     }
 }

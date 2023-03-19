@@ -7,4 +7,6 @@
     <string name="mact_btn_close">Close App</string>
     <string name="mact_hint_phone">(XXX) XXX - XXXX</string>
     <string name="mact_hint_url">https://sjsu.edu</string>
+    <string name="mact_btn_sendtext">Text Send</string>
+    <string name="mact_hint_sendtext">Hello! How are you?</string>
 </resources>
